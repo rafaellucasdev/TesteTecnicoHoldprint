@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: contasapagar-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: ContasAPagarDB
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - contasapagar-network
+
+  api:
+    build:
+      context: .
+      dockerfile: ContasAPagar.API/Dockerfile
+    container_name: contasapagar-api
+    restart: unless-stopped
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - MongoDbSettings__ConnectionString=mongodb://mongodb:27017
+      - MongoDbSettings__DatabaseName=ContasAPagarDB
+    depends_on:
+      - mongodb
+    networks:
+      - contasapagar-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  contasapagar-network:
+    driver: bridge
+
