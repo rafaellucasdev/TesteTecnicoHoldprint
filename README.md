@@ -20,8 +20,8 @@ API REST desenvolvida em .NET 10 com MongoDB para gerenciamento de contas a paga
 ### 1. Clone o repositório
 
 ```bash
-git clone <url-do-repositorio>
-cd ContasAPagar.API
+git clone <https://github.com/rafaellucasdev/TesteTecnicoHoldprint.git>
+cd TesteTecnicoHoldprint
 ```
 
 ### 2. Configure o MongoDB
