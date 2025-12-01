@@ -1,6 +1,6 @@
 # API de Contas a Pagar
 
-API REST desenvolvida em .NET 8 com MongoDB para gerenciamento de contas a pagar e fornecedores.
+API REST desenvolvida em .NET 10 com MongoDB para gerenciamento de contas a pagar e fornecedores.
 
 ## 🚀 Tecnologias
 
