@@ -4,7 +4,7 @@ API REST desenvolvida em .NET 8 com MongoDB para gerenciamento de contas a pagar
 
 ## 🚀 Tecnologias
 
-- .NET 8
+- .NET 10
 - MongoDB Driver 2.23.1
 - FluentValidation 11.9.0
 - Swagger/OpenAPI
